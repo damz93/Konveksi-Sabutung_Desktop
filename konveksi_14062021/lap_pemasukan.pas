@@ -1,0 +1,72 @@
+unit lap_pemasukan;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, grimgctrl, jpeg, QRCtrls, QuickRpt, ExtCtrls, acPNG;
+
+type
+  Tlap_pemasukann = class(TForm)
+    qrep_pemasukan: TQuickRep;
+    QRBand2: TQRBand;
+    QRExpr2: TQRExpr;
+    QRDBText4: TQRDBText;
+    QRShape1: TQRShape;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText8: TQRDBText;
+    QRBand3: TQRBand;
+    QRExpr5: TQRExpr;
+    QRLabel3: TQRLabel;
+    QRBand5: TQRBand;
+    QRShape3: TQRShape;
+    QRExpr8: TQRExpr;
+    QRLabel5: TQRLabel;
+    QRLabel9: TQRLabel;
+    exp_totbayar: TQRExpr;
+    QRBand6: TQRBand;
+    QRLabel6: TQRLabel;
+    QRLabel13: TQRLabel;
+    QRLabel14: TQRLabel;
+    QRLabel15: TQRLabel;
+    QRShape2: TQRShape;
+    QRShape4: TQRShape;
+    QRLabel2: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRLabel8: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRLabel12: TQRLabel;
+    QRDBText6: TQRDBText;
+    QRDBText7: TQRDBText;
+    QRDBText9: TQRDBText;
+    QRBand1: TQRBand;
+    QRExpr1: TQRExpr;
+    QRExpr3: TQRExpr;
+    lbl_rep: TQRLabel;
+    QRImage1: TQRImage;
+    QRLabel16: TQRLabel;
+    QRLabel4: TQRLabel;
+    procedure qrep_pemasukanAfterPreview(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  lap_pemasukann: Tlap_pemasukann;
+implementation
+   uses koneksi, lap_pemasukan_berdasarkan;
+{$R *.dfm}
+
+procedure Tlap_pemasukann.qrep_pemasukanAfterPreview(Sender: TObject);
+begin
+  lap_pemasukan_berdasarkann.kosong;
+  lap_pemasukan_berdasarkann.sembunyi;
+end;
+
+end.
